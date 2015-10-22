@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arquivo 1.1.6c</title>
+	<style type="text/css" media="all">
+		h1 {color: #090;} /*Cor verde*/
+	</style>
+	<script type="text/javascript">
+		window.onload = function() {
+			document.getElementById('btn-red').onclick = changeColor;
+		};
+
+		function changeColor() {
+			document.getElementById('color').style.color = "#FF0000"
+		};
+	</script>
+</head>
+<body>
+	<h1 id="color">Cabeçalho muda de cor</h1>
+	<button type="button" id="btn-red">
+		Vermelho
+	</button>
+</body>
+</html>

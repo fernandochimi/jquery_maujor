@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title>Arquivo 2.2.6e</title>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("button").click(function() {
+				$("p[title $= tle]").css("background", "red");
+			});
+		});
+	</script>
+</head>
+<body>
+	<button type="button">Red</button>
+	<h3>Header level 3</h3>
+	<p>Paragraph text <b>without</b> attribute title = "my_title"</p>
+	<p title="my_title">Paragraph text <b>with</b> attribute title = "my_title"</p>
+	<p lang="pt-br">Paragraph text with attribute lang</p>
+	<p title="another_title">Paragraph text with attribute title = "another_title"</p>
+</body>
+</html>
