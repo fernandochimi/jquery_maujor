@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title>Arquivo 3.1d</title>
+	<style type="text/css" media="all">
+		div {width: 300px; height: 175px; border: 1px solid #000;}
+		#remove {background: #0f0;}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("button").click(function() {
+				$("#remove").removeAttr("id");
+			});
+		});
+	</script>
+</head>
+<body>
+	<button type="button">Remove Attribute</button>
+	<div id="remove"></div>
+</body>
+</html>

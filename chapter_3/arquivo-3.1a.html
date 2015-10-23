@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title>Arquivo 3.1a</title>
+	<style type="text/css" media="all">
+		#result {display: none; width: 300px; padding: 8px 12px; border: 1px solid #000; background: #ff0;}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("button").click(function() {
+				var attributeValue = $("h1").attr("title");
+				$("#result").css("display", "block").text("The value of attribute title is: " + attributeValue);
+			});
+		});
+	</script>
+</head>
+<body>
+	<button type="button">Attribute</button>
+	<h1 title="logo">Header level 1 with attribute title="logo"</h1>
+	<p id="one">First paragraph with attribute id="one"</p>
+	<p class="diferent">Second paragraph with attribute class="diferent"</p>
+	<p class="diferent">Third paragraph with attribute class="diferent"</p>
+	<div id="result"></div>
+</body>
+</html>
