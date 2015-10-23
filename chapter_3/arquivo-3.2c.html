@@ -2,21 +2,21 @@
 <html>
 <head>
 <head>
-	<title>Arquivo 3.2a</title>
+	<title>Arquivo 3.2c</title>
 	<style type="text/css" media="all">
-		p.my_class {color: #f00; font-size: 45px;}
+		p.remove {background: #f00; border: 1px solid #000;}
 	</style>
 	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$("button").click(function() {
-				$("p").addClass("my_class");
+				$("p").toggleClass("remove");
 			});
 		});
 	</script>
 </head>
 <body>
-	<button type="button">Remove Attribute</button>
-	<p>Paragraph that was added a class with jQuery</p>
+	<button type="button">Change Attribute</button>
+	<p class="remove">Paragraph with class="remove" defined on mark</p>
 </body>
 </html>
