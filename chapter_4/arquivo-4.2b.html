@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title>Arquivo 4.2b</title>
+	<style type="text/css" media="all">
+		div {width: 300px; height: 200px; background: #0f0; margin: 50px 0 0 100px;}
+		p {background: red;}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("button").click(function() {
+				var coordinatesTo = $("p:eq(2)").position();
+				$("span").html("The coordinates of 3rd paragraph are:<br /> left: "+
+					coordinatesTo.left + " px<br /> top: " + coordinatesTo.top + " px");
+			});
+		});
+	</script>
+</head>
+<body>
+	<button type="button">Coordinates</button><br />
+	<div>
+		<p>First paragraph inside of DIV</p>
+		<p>Second paragraph inside of DIV</p>
+		<p>Third paragraph inside of DIV</p>
+	</div>
+	<span></span>
+</body>
+</html>
