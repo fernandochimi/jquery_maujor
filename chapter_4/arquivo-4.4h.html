@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title>Arquivo 4.4h</title>
+	<style type="text/css" media="all">
+		div, blockquote {width: 300px; height: 40px; margin: 10px; border: 1px solid #000;}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("button").click(function() {
+				$("p").parent().css("backgroundColor", "#ff0");
+			});
+		});
+	</script>
+</head>
+<body>
+	<button type="button">Parent</button><br />
+	<div><h4>Header h4 son of a div</h4></div>
+	<div><p>Paragraph son of a div</p></div>
+	<blockquote><p>Paragraph son of a blockquote</p></blockquote>
+</body>
+</html>
