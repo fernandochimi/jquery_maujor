@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title>Arquivo 5.1d</title>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("input").focus(function() {
+				$("input").css("background", "yellow");
+				$(".message").html("Type only numbers to inform your CPF.")
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>Click inside of text below</p>
+	<label>CPF: <input type="text" /></label>
+	<p class="message"></p>
+</body>
+</html>
