@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title>Arquivo 5.1a</title>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("input").blur(function() {
+				$("input").css("background", "yellow");
+				$(".message").text("You run the blur() event.");
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>Click inside of text field below<br />
+	and after in any place out of this.</p>
+	<input type="text" />
+	<p class="message"></p>
+</body>
+</html>
