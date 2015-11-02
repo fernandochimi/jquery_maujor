@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title>Arquivo 4.4p</title>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("button:eq(0)").click(function() {
+				$("li.diferent").siblings().css("background", "yellow");
+			});
+			$("button:eq(1)").click(function() {
+				$("li.diferent").siblings().css("background", "");
+			});
+		});
+	</script>
+</head>
+<body>
+	<button type="button">siblings()</button>
+	<button type="button">Reset</button>
+	<ul>
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li class="diferent">Item 3</li>
+		<li>Item 4</li>
+		<li>Item 5</li>
+	</ul>
+	<ul>
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+		<li>Item 4</li>
+		<li>Item 5</li>
+	</ul>
+</body>
+</html>
