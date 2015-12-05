@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="description" content="jQuery lessons">
+	<meta name="author" content="Fernando Chimicoviaki">
+
+	<title>Arquivo 8.3a</title>
+	<style type="text/css" media="all">
+		div {
+			width: 200px;
+			height: 150px;
+			background: #ff0;
+			border: 2px solid #000;
+			cursor: pointer;
+		}
+		body {
+			width: 700px;
+			font: 80%/1.2 Arial, Helvetica, sans-serif;
+			margin: 20px auto;
+			padding: 10px 20px;
+			border: 1px solid #ccc;
+		}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(function() {
+				$("div").toggle(
+					function(event) {
+						$(event.target).css("opacity", 0.2);
+					},
+					function(event) {
+						$(event.target).css("opacity", 1);
+					}
+				);
+			});
+		});
+	</script>
+</head>
+<body>
+	<div>
+		Click-me
+	</div>
+</body>
+</html>
