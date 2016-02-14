@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arquivo 7.2a</title>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".version").click(function() {
+				var $browserVersion = $.browser.version;
+				$("p").append("Engine Version Browser: <b>" + $browserVersion + "</b><br />");
+
+				if (jQuery.browser.mozilla) {
+					$("p").append("<b>Mozilla</b>");
+				}
+				else if (jQuery.browser.msie) {
+					$("p").append("<b>I.E</b>");
+				}
+				else if (jQuery.browser.safari) {
+					$("p").append("<b>Safari</b>");
+				}
+				else if (jQuery.browser.opera) {
+					$("p").append("<b>Opera</b>");
+				}
+				else {
+					$("p").append("<b>Browser Unidentified</b>");
+				};
+			});
+			$(".reset").click(function() {
+				$("p").empty();
+			});
+		});
+	</script>
+</head>
+<body>
+	<button type="button" class="version">Flags (This methods was deprecated)</button>
+	<button type="button" class="reset">Reset</button><br />
+	<p></p>
+</body>
+</html>

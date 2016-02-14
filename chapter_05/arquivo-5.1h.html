@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title>Arquivo 5.1h</title>
+	<style type="text/css" media="all">
+		h2 {cursor: pointer;}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("h2").mousedown(function() {
+				$(this).append(" <span style='color:blue'>mousedown()</span> ");
+			}).mouseup(function() {
+				$(this).append(" <span style='color:red'>mouseup()</span> ");
+			});
+		});
+	</script>
+</head>
+<body>
+	<h2>Click, hold and drop.</h2>
+</body>
+</html>

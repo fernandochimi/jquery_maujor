@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arquivo 7.3b</title>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".version").click(function() {
+				var arr = [4, 3, 1, 9, 6, 8, 0, 2, 7, 3, 4, 8, 7, 1, 9];
+				$("#one").append("<p>" + arr.join("- ") + "</p>");
+				arr = jQuery.grep(arr, function(val, i) {
+					return (val != 3);
+				});
+				$("#one").append("<p>" + arr.join("- ") + "</p>");
+				arr = jQuery.grep(arr, function(val, i) {
+					return (i < 2 || i > 4);
+				});
+				$("#one").append("<p>" + arr.join("- ") + "</p>");
+				arr = jQuery.grep(arr, function(val, i) {
+					return (val <= 7 && i != 2);
+				});
+				$("#one").append("<p>" + arr.join("- ") + "</p>");
+			});
+			$(".reset").click(function() {
+				$("#one").empty();
+			});
+		});
+	</script>
+</head>
+<body>
+	<button type="button" class="version">jQuery.grep()</button>
+	<button type="button" class="reset">Reset</button><br />
+	<div id="one"></div>
+</body>
+</html>

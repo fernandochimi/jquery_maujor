@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arquivo 5.3a</title>
+	<style type="text/css" media="all">
+		div {cursor: pointer; width: 100px; height: 100px; border: 2px solid #000;}
+		span {display: block;}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("div").bind("mouseover", function() {
+				$(this).css("borderWidth", "10px");
+				$("span:eq(0)").text("An event mouseover occured. Grow the border thickness.");
+			});
+			$("div").bind("click", function(o) {
+				var coordinates = "x= " + o.pageX + ", y= " + o.pageY;
+				$("span:eq(1)").text("An event click on coordinates occured: " + coordinates);
+			});
+			$("div").bind("dblclick", function() {
+				$(this).css("background", "red");
+				$("span:eq(2)").text("An event dblclick occured. Changed the background color.");
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>Events linked with bind():</p>
+	<ul>
+		<li>mouseover - Grow the border thickness</li>
+		<li>click - store and show click coordinates</li>
+		<li>dblclick - change the background color</li>
+	</ul>
+	<div></div>
+	<span></span>
+	<span></span>
+	<span></span>
+</body>
+</html>

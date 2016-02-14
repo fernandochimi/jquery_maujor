@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title>Arquivo 5.1b</title>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("select").change(function() {
+				var chosenValue = $("option:selected").text();
+				$(".message").html("You run the change() event. <br />Selected: " + chosenValue);
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>Do it some selections in select field</p>
+	<select>
+		<option>Chosen One</option>
+		<option>Chosen Two</option>
+		<option>Chosen Three</option>
+		<option>Chosen Four</option>
+		<option>Chosen Five</option>
+		<option>Chosen Six</option>
+		<option>Chosen Seven</option>
+	</select>
+	<p class="message"></p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title>Arquivo 5.1e</title>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("input").keyup(function() {
+				$("body").css("background", "#cff");
+				$(".message").html("When you press any key of your keyboard, <br />occured the keyup() event and the background color of page changed.");
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>Enter any key in the field below</p>
+	<input type="text" />
+	<p class="message"></p>
+</body>
+</html>

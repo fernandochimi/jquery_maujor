@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arquivo 7.6.2b</title>
+	<style type="text/css" media="all">
+		p {color: #999;}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			(function($) {
+				$.colorText = function(e) {
+					var selection = document.getElementById("selectColor");
+					var indexSelection = selection.selectedIndex;
+					var sel = selection.options[indexSelection].value;
+					var element = document.getElementsByTagName(e);
+					for (var i = 0; i < element.length; i++) {
+						element[i].style.color = sel;
+					}
+				}
+			})(jQuery);
+			$("#selectColor").change(function() {
+				$.colorText("p");
+			});
+		});
+	</script>
+</head>
+<body>
+	<form action="" method="">
+		<label>Choose a color to paragraphs:<br />
+		<select id="selectColor">
+			<option value="#999999">Default</button>
+			<option value="#FF0000">Red</button>
+			<option value="#0000FF">Blue</button>
+			<option value="#00CC00">Green</button>
+		</select>
+		</label>
+	</form>
+	<p>Paragraph One</p>
+	<p>Paragraph Two</p>
+	<p>Paragraph Three</p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arquivo 7.6.2.1a</title>
+	<style type="text/css" media="all">
+		p {color: #999;}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("select").change(function() {
+				$("option:selected").each(function() {
+					$("p").css("color", $(this).val());
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<form action="" method="">
+		<label>Choose a color:<br />
+		<select id="selectColor">
+			<option value="#999999">Default</option>
+			<option value="#FF0000">Red</option>
+			<option value="#0000FF">Blue</option>
+			<option value="#00CC00">Green</option>
+		</select>
+		</label>
+	</form>
+	<p>Paragraph One</p>
+	<p>Paragraph Two</p>
+	<p>Paragraph Three</p>
+</body>
+</html>

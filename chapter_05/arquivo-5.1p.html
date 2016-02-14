@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title>Arquivo 5.1p</title>
+	<style type="text/css" media="all">
+		div {color: #f00;}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("form").submit(function() {
+				if($("input:first").val() == "") {
+					$("div").text("Please, fill the field.");
+					return false;
+				}
+				if($("input:first").val() !== "jQuery") {
+					$("div").text("Sorry! Enter the wrong word.");
+					return false;
+				} else {
+					$("div").text("Congrats! Enter the right word.");
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>Enter the jQuery word in the field below and click on the Send button.<br />
+	Warning: field with case sensitive</p>
+	<form action="javascript:void()">
+		<label>Text Field</label><br />
+		<input type="text" />
+		<input type="submit" value="Send" />
+	</form>
+	<div></div>
+</body>
+</html>

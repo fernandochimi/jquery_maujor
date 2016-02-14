@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="description" content="jQuery lessons">
+	<meta name="author" content="Fernando Chimicoviaki">
+
+	<title>Arquivo 8.2a</title>
+	<style type="text/css" media="all">
+		body {
+			width: 700px;
+			font: 80%/1.2 Arial, Helvetica, sans-serif;
+			margin: 20px auto;
+			padding: 10px 20px;
+			border: 1px solid #ccc;
+		}
+		h1 {font-size: 1.6em; clear: both;}
+		div	{margin-bottom: 20px; color: #c30;}
+		div#with-class {float: left;}
+		div#all {float: right;}
+		button {font-size: 0.9em;}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button:eq(0)").click(function() {
+				$("p.hide").hide();
+			});
+			$("button:eq(1)").click(function() {
+				$("p.hide").show();
+			});
+			$("button:eq(2)").click(function() {
+				$("p").hide();
+			});
+			$("button:eq(3)").click(function() {
+				$("p").show();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="with-class">
+		<label>Paragraphs with class "hide"<br /></label>
+		<button type="button">Hide</button>
+		<button type="button">Show</button>
+	</div>
+	<div id="all">
+		<label>All Paragraphs<br /></label>
+		<button type="button">Hide</button>
+		<button type="button">Show</button>
+	</div>
+	<h1>Cascading Style Sheet</h1>
+	<p>CSS means Cascading Style Sheet...</p>
+	<p>The great vantage...</p>
+	<p>HTML marks and...</p>
+	<p class="hide">The introduction of this...</p>
+	<p class="hide">Project in...</p>
+</body>
+</html>

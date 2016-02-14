@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title>Arquivo 4.2a</title>
+	<style type="text/css" media="all">
+		div {width: 100px; height: 100px; background: #0f0; margin: 50px 0 0 100px;}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("button").click(function() {
+				var coordinatesDiv = $("div").offset();
+				$("span").html("The coordinates of div are:<br /> left: "+
+					coordinatesDiv.left + " px<br /> top: " + coordinatesDiv.top + " px");
+			});
+		});
+	</script>
+</head>
+<body>
+	<button type="button">Coordinates</button><br />
+	<div>Div to determine coordinates</div>
+	<span></span>
+</body>
+</html>

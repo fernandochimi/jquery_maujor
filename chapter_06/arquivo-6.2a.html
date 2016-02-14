@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arquivo 6.2a</title>
+	<style type="text/css" media="all">
+		div {width: 200px; height: 300px; margin: 30px 0; border: 2px solid #000; color: #fff; background: #f00; display: none;}
+		.bug {height: 140px; padding: 80px 0;}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("button").eq(0).click(function() {
+				$("div").eq(0).slideDown("slow");
+			});
+			$("button").eq(1).click(function() {
+				$("div").eq(0).slideUp("slow");
+			});
+			$("button").eq(2).click(function() {
+				$(".bug").slideDown("slow");
+			});
+			$("button").eq(3).click(function() {
+				$(".bug").slideUp("slow");
+			});
+			$("button").eq(4).click(function() {
+				$(".alternate").slideToggle(1500);
+			});
+		});
+	</script>
+</head>
+<body>
+	<button type="button">Effect slideDown("slow")</button>
+	<button type="button">Effect slideUp("slow")</button><br /><br />
+	<button type="button">BUG slideDown("slow")</button>
+	<button type="button">BUG slideUp("slow")</button><br /><br />
+	<button type="button">Effect slideToggle(1500)</button>
+		<div>DIV in all.</div>
+		<div class="bug">DIV in all.<br />
+		With padding declaration</div>
+		<div class="alternate">Demonstration of slideToggle(1500) Effect.<br />
+		Click repeatedely the button Effect slideToggle(1500)</div>
+</body>
+</html>

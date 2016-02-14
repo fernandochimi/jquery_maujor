@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title>Arquivo 5.1q</title>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		// unload() doesn't work in jQuery 1.8 or more
+		$(document).ready(function() {
+			$(window).unload(function() {
+				alert("This is a demonstration of unload() event.");
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>Close this window to see the unload() event in action.</p>
+</body>
+</html>

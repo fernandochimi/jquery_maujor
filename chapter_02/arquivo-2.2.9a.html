@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title>Arquivo 2.2.9a</title>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("button").click(function() {
+				$(":disabled").css("border", "2px solid #FF0000");
+			});
+		});
+	</script>
+</head>
+<body>
+	<button type="button">Disabled fields Edges</button>
+	<form action="">
+		<p><label>Input Text: <input type="text" disabled="disabled" /></label></p>
+		<p><label>Input Checkbox: <input type="checkbox" /></label></p>
+		<p><label>Input Checkbox: <input type="checkbox" /></label></p>
+		<p><label>Input Checkbox: <input type="checkbox" checked="checked" /></label></p>
+		<p><label>Input Checkbox: <input type="checkbox" /></label></p>
+		<p><label>Input Radio: <input type="radio" /></label></p>
+		<p><label>Input Radio: <input type="radio" /></label></p>
+		<p><label>Select: <select>
+			<option>Option 1</option>
+			<option selected="selected">Option Selected</option>
+			<option>Option 2</option>
+			<option disabled="disabled">Option Disabled</option>
+			<option>Option 3</option>
+			<option>Option 4</option>
+		</select></label></p>
+		<p><label>Input Button: <input type="button" disabled="disabled" /></label></p>
+	</form>
+</body>
+</html>

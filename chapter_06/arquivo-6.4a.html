@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arquivo 6.4a</title>
+	<style type="text/css" media="all">
+		div {width: 40px; height: 40px; margin: 30px 0; border: 2px solid #000; background: #0f0;}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("button:eq(0)").click(function() {
+				$("div").animate(
+				{width:'300px',
+				height:'600px',
+				opacity:0.33,
+				border:'10px dashed #f00'},
+				1500)
+			});
+		});
+	</script>
+</head>
+<body>
+	<button type="button">Animate</button>
+	<div></div>
+</body>
+</html>

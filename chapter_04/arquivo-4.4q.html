@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title>Arquivo 4.4q</title>
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("button:eq(0)").click(function() {
+				$("div").append($("input").map(function() {
+					return $(this).val();
+				}).get().join(", "));
+			});
+			$("button:eq(1)").click(function() {
+				$("div").empty();
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>Type name and email in the fields below and run the script</p>
+	<button type="button">map()</button>
+	<button type="button">Reset</button>
+	<form action="" method="GET">
+		<label>Nome:<br /><input type="text" /></label><br />
+		<label>E-Mail:<br /><input type="text" /></label><br />
+		<span>Gender:</span><br />
+		<label><input type="radio" name="gender" value="male">Male</label>
+		<label><input type="radio" name="gender" value="female">Female</label>
+	</form>
+	<div></div>
+</body>
+</html>
