@@ -6,7 +6,7 @@
 	<meta name="description" content="jQuery lessons">
 	<meta name="author" content="Fernando Chimicoviaki">
 
-	<title>Arquivo 9.1b</title>
+	<title>Arquivo 9.1f</title>
 	<style type="text/css" media="all">
 		body {
 			width: 400px;
@@ -24,31 +24,41 @@
 			padding: 5px 0 0 0;
 			text-align: justify;
 		}
+		.invisible {
+			display: none;
+		}
+		.end-visible {
+			border: 1px solid #c30;
+			padding: 5px 10px;
+			background: #ff9;
+		}
+		ol li a {
+			color: blue;
+			text-decoration: none;
+		}
+		.color-one {
+			color: red;
+		}
+		.color-two {
+			color: blue;
+		}
 	</style>
 	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
 	<script type="text/javascript">
-	$(document).ready(function() {
-		var textSee = "<a href='#' style='color:#666; text-decoration:none;'>Ver Resposta</a>";
-		$("dd").css("display", "none");
-		$("dt").after(textSee);
-		$("a").click(function() {
-			if ($(this).text() == 'Ver Resposta') {
-				$(this).next().next().toggle();
-				$(this).text('Fechar');
-				$(this).next()
-				.css({
-					border: '1px solid #c30',
-					padding: '5px 10px',
-					background: '#ff9'
-				})
-				.slideToggle('slow');
-			} else {
-				$(this).text('Ver Resposta');
-				$(this).next().slideToggle('slow');
-				$(this).next().next().toggle();
-			}
+		$(document).ready(function() {
+			$('dt, dd').addClass('invisible');
+			$('ol').after('<p>Clique em uma pergunta para visualizar a resposta</p>');
+			$('ol li a').click(function(){
+				$('dt').css({display:'none'});
+				$(this).removeClass('color-two').addClass('color-one');
+				$(this).parent().siblings().children().addClass('color-two');
+				var idClicked = $(this).attr('href');
+				$(idClicked + ' + dd').siblings('dd:visible').hide();
+				$(idClicked).slideDown(1500);
+				$(idClicked + ' + dd').fadeIn(2500).addClass('end-visible');
+				$(idClicked + ' + dd + dd').show();
+			});
 		});
-	});
 	</script>
 </head>
 <body>
@@ -71,10 +81,10 @@
 		<dd><a href="#indice">Índice</a></dd>
 
 		<dt id="finalidade">Qual é finalidade das CSS?</dt>
-		<dd>A finalidade das CSS é a de retirar da marcação toda e qualquer declaração que vise a apresentação do documento. Isto significa dizer que tags do tipo <font>, <b>, <i> bem como uso de colunas e linhas de tabelas para obtenção de espaçamentos não são admitidos ou admitidos com restrições em um projeto Web com CSS. Vale dizer simplificando: HTML para estruturação e CSS para apresentação.
+		<dd>A finalidade das CSS é a de retirar da marcação toda e qualquer declaração que vise a apresentação do documento. Isto significa dizer que tags do tipo font, b, i bem como uso de colunas e linhas de tabelas para obtenção de espaçamentos não são admitidos ou admitidos com restrições em um projeto Web com CSS. Vale dizer simplificando: HTML para estruturação e CSS para apresentação.
 
-		As tags <b> e <i> cumprem finalidade unicamente de apresentação. Elas não têm qualquer efeito sobre tecnologias assistivas. Foram criadas à época antiga de marcar documentos web e basicamente calcados em estruturação para mídia tipográfica, não imputando qualquer relevância ao texto com elas marcado e nada significam para leitores de tela ou mecanismos de busca por exemplo. Não estão em desuso, são previstas na HTML5, podem e devem ser usadas se a sua intenção é a de contemplar somente mídia visual.
-		As tags <strong> e <em>, estas sim, são interpretadas por todas as tecnologias assistivas e devem ser usadas em substituição a <b> e <i> se a sua intenção é a de contemplar estas tecnologias.</dd>
+		As tags b e i cumprem finalidade unicamente de apresentação. Elas não têm qualquer efeito sobre tecnologias assistivas. Foram criadas à época antiga de marcar documentos web e basicamente calcados em estruturação para mídia tipográfica, não imputando qualquer relevância ao texto com elas marcado e nada significam para leitores de tela ou mecanismos de busca por exemplo. Não estão em desuso, são previstas na HTML5, podem e devem ser usadas se a sua intenção é a de contemplar somente mídia visual.
+		As tags strong e em, estas sim, são interpretadas por todas as tecnologias assistivas e devem ser usadas em substituição a b e i se a sua intenção é a de contemplar estas tecnologias.</dd>
 		<dd><a href="#indice">Índice</a></dd>
 
 		<dt id="usar">Porque devo usar CSS?</dt>
