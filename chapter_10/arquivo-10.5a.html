@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="description" content="jQuery lessons">
+	<meta name="author" content="Fernando Chimicoviaki">
+
+	<title>Arquivo 10.5a</title>
+
+	<style type="text/css" media="all">
+		body {
+			width: 600px;
+			font: 80%/1.2 Arial, Helvetica, sans-serif;
+			margin: 30px auto;
+			padding: 0;
+			color: #666;
+		}
+
+		table {
+			width: 550px;
+			border-collapse: collapse;
+			border: 2px solid #999;
+			margin: 0 auto;
+		}
+
+		caption {
+			text-align: right;
+			margin-bottom: 0.3em;
+			border-bottom: 1px solid #333;
+			padding-right: 0.3em;
+		}
+
+		thead tr th {
+			text-align: center;
+			border-bottom: 2px solid #999;
+			border-left: 2px solid #999;
+		}
+
+		tr td, tr th {
+			padding: 1px 5px;
+			text-align: left;
+			font-size: 0.9em;
+			border: 1px dotted #333;
+		}
+
+		tfoot tr td {
+			text-align: center;
+			border-top: 2px solid #999;
+		}
+
+		.even {background: #add6ef;}
+		.odd {background: #d6e2e5;}
+
+		.main-line {background: #444; color: #fff;}
+
+	</style>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('table#hour tbody tr:odd').addClass('even');
+			$('table#hour tbody tr:even').addClass('odd');
+
+			$('table#hour tbody tr').hover(
+				function() {
+					$(this).addClass('main-line');
+				},
+				function() {
+					$(this).removeClass('main-line');
+				}
+			);
+		});
+	</script>
+
+</head>
+<body>
+	<table id="hour">
+		<tbody>
+			<caption>Viação Alfa</caption>
+			<thead>
+				<tr id="horizontal">
+					<th>Destino</th>
+					<th scope='col'>Saída</th>
+					<th scope='col'>Chegada</th>
+					<th scope='col'>Classe</th>
+					<th scope='col'>Tarifa</th>
+					<th scope='col'>Freq&uuml;ência</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td>Válida para o período de 02/02/2016 a 31/03/2016</td>
+				</tr>
+			</tfoot>
+			<tr>
+				<th scope='row'>Brusque</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+			<tr>
+				<th scope='row'>Joinville</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+			<tr>
+				<th scope='row'>São Paulo</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+			<tr>
+				<th scope='row'>Porto União</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+			<tr>
+				<th scope='row'>Caçador</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+			<tr>
+				<th scope='row'>Sorocaba</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+			<tr>
+				<th scope='row'>Blumenau</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+			<tr>
+				<th scope='row'>Itajaí</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+			<tr>
+				<th scope='row'>Lajes</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+			<tr>
+				<th scope='row'>Urussanga</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+			<tr>
+				<th scope='row'>Canoinhas</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+			<tr>
+				<th scope='row'>São Francisco do Sul</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+			<tr>
+				<th scope='row'>Joaçaba</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+			<tr>
+				<th scope='row'>Jaraguá do Sul</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+			<tr>
+				<th scope='row'>Xanxerê</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+			<tr>
+				<th scope='row'>Chapecó</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+			<tr>
+				<th scope='row'>Xaxim</th>
+				<td>06:45</td>
+				<td>14:30</td>
+				<td>Convencional</td>
+				<td>R$ 80,00</td>
+				<td>Diária</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
