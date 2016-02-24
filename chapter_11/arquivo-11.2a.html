@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="description" content="jQuery lessons">
+	<meta name="author" content="Fernando Chimicoviaki">
+
+	<title>Arquivo 11.2a</title>
+
+	<style type="text/css" media="all">
+	</style>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		var defaultText = $('#form label').remove().text();
+		$('#search').val(defaultText).css('color', '#999').focus(function() {
+			if ($(this).val() == defaultText) {
+				$(this).css('color', '').val('');
+			}
+		}).blur(function() {
+			if ($(this).val() == ' ') {
+				$(this).val(defaultText).css('color', '#999');
+			}
+		});
+	});
+	</script>
+
+</head>
+<body>
+	<form action="" method="GET" id="form">
+		<label for="search">Search</label>
+		<input name="search" type="text" id="search" />
+	</form>
+</body>
+</html>
