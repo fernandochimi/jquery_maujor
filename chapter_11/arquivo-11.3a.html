@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="description" content="jQuery lessons">
+	<meta name="author" content="Fernando Chimicoviaki">
+
+	<title>Arquivo 11.3a</title>
+
+	<style type="text/css" media="all">
+	</style>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('.tip + span').css({
+			display:'none',
+			border:'1px solid #add6ef',
+			padding:'2px 4px',
+			background:'#d6e2e5',
+			marginLeft:'10px'
+		});
+		$('.tip').focus(function() {
+			$(this).next().fadeIn(1500);
+		}).blur(function() {
+			$(this).next().fadeOut(1500);
+		});
+	});
+	</script>
+
+</head>
+<body>
+	<form action="" method="GET" id="form">
+		<label for="cpf">CPF</label><br />
+		<input name="cpf" type="text" id="cpf" class="tip" /><span>Only numbers</span><br />
+		<label for="date">Date</label><br />
+		<input name="date" type="text" id="date" class="tip" /><span>dd/mm/yyyy</span>
+	</form>
+</body>
+</html>

@@ -15,6 +15,7 @@
 	<script type="text/javascript">
 	$(document).ready(function() {
 		var defaultText = $('#form label').attr('title');
+		// var defaultText = 'keyword';
 		$('#search').val(defaultText).css('color', '#999').focus(function() {
 			if ($(this).val() == defaultText) {
 				$(this).css('color', '').val('');
