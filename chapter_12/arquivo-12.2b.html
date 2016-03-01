@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="description" content="jQuery lessons">
+	<meta name="author" content="Fernando Chimicoviaki">
+
+	<title>Arquivo 12.2b</title>
+
+	<style type="text/css" media="all">
+		.photo {
+			border: none;
+		}
+
+		#galery {
+			width: 500px;
+			position: relative;
+		}
+
+		.open-close {
+			position: absolute;
+			background: #add6ef;
+			left: 0;
+			top: 0;
+			text-align: center;
+			font-size: 11px;
+			cursor: pointer;
+		}
+	</style>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var openClose = $('#galery + span').addClass('open-close').css({opacity:0.6, width:120});
+			$('#galery').prepend(openClose).click(function(event) {
+				event.preventDefault();
+				$('.open-close').hide();
+				if($('.photo').attr('width') > 120) {
+					$('.photo').animate({width:120, height:90}, 1500, function() {
+						$('.open-close').show().text('Click to size').css({width:$('.photo').attr('width')});
+					});
+					$('.open-close').text('Click to size').css({width:$('.photo').attr('width')});
+				} else {
+					$('.photo').animate({width:500, height:375}, 1500, function() {
+						$('.open-close').show().text('Click to close').css({width:$('.photo').attr('width')});
+					});
+				};
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<div id="galery">
+		<a href="../img/img_1.jpg"><img src="../img/img_1.jpg" alt="Photo Description" width="120" height="90" class="photo" /></a>
+	</div>
+	<span>Click to size</span>
+</body>
+</html>
