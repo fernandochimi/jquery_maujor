@@ -6,7 +6,7 @@
 	<meta name="description" content="jQuery lessons">
 	<meta name="author" content="Fernando Chimicoviaki">
 
-	<title>Arquivo 11.6a</title>
+	<title>Arquivo 11.7b</title>
 
 	<style type="text/css" media="all">
 		body {
@@ -72,18 +72,12 @@
 	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$(':checkbox').parents('label').hide();
-			$(':radio').wrap('<a href="#"></a>');
-			$(':radio').parents('label').click(function() {
-				$(this).siblings().fadeIn(1500);
-				$(this).parent().siblings('.change').children('label:not(.manufacturer)').slideUp().find(':checked').each(function() {
-					$(this).removeAttr('checked');
-				});
+			$('#send').click(function() {
+				var i = $('.change input:checked').size();
+				if (i == 0 || i > 5) {
+					alert('Please choose at least one and max five items');
+				}
 			});
-			$('<h4 class="leg"></h4>').insertAfter('legend');
-			var textLeg = $('legend').remove().text();
-			$('.leg').append(textLeg);
-			$('fieldset').addClass('fieldset');
 		});
 	</script>
 
@@ -93,21 +87,15 @@
 		<fieldset>
 			<legend>Select a manufacturer and choose your preference</legend>
 				<div class="change">
-					<label class="manufacturer"><input type="radio" name="manufacturer" />Mercedez Benz</label>
-					<label><input type="checkbox">Classe A - Hatchback</label>
-					<label><input type="checkbox">Classe B - MPV</label>
-				</div>
-				<div class="change">
-					<label class="manufacturer"><input type="radio" name="manufacturer" />Ferrari</label>
-					<label><input type="checkbox">599 GTB</label>
-					<label><input type="checkbox">California 2009</label>
-				</div>
-				<div class="change">
-					<label class="manufacturer"><input type="radio" name="manufacturer" />Volvo</label>
-					<label><input type="checkbox">S40</label>
-					<label><input type="checkbox">S60</label>
+					<label><input type="checkbox" />Classe A - Hatchback</label>
+					<label><input type="checkbox" />Classe B - MPV</label>
+					<label><input type="checkbox" />599 GTB</label>
+					<label><input type="checkbox" />California 2009</label>
+					<label><input type="checkbox" />S40</label>
+					<label><input type="checkbox" />S60</label>
 				</div>
 		</fieldset>
+		<input type="submit" value="Send" id="send">
 	</form>
 </body>
 </html>
