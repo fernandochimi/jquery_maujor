@@ -6,7 +6,7 @@
 	<meta name="description" content="jQuery lessons">
 	<meta name="author" content="Fernando Chimicoviaki">
 
-	<title>Arquivo 12.2b</title>
+	<title>Arquivo 12.2c</title>
 
 	<style type="text/css" media="all">
 		.photo {
@@ -37,13 +37,15 @@
 				event.preventDefault();
 				$('.open-close').hide();
 				if($('.photo').attr('width') > 120) {
-					$('.photo').animate({width:120, height:90}, 1500, function() {
-						$('.open-close').show().text('Click to size').css({width: $('.photo').attr("width")});
+					$('.photo').animate({width:120, height:90, opacity:0.2}, 1500, function() {
+						$('.photo').animate({opacity:1}, 1000);
+						$('.open-close').show().text('Click to size').css({width:$('.photo').attr("width")});
 					});
-					$('.open-close').text('Click to size').css({width: $('.photo').attr("width")});
+					$('.open-close').text('Click to size').css({width:$('.photo').attr("width")});
 				} else {
-					$('.photo').animate({width:500, height:375}, 1500, function() {
-						$('.open-close').show().text('Click to close').css({width: $('.photo').attr("width")});
+					$('.photo').animate({width:500, height:375, opacity:0.2}, 1500, function() {
+						$('.photo').animate({opacity:1}, 1000);
+						$('.open-close').show().text('Click to close').css({width:$('.photo').attr("width")});
 					});
 				};
 			});

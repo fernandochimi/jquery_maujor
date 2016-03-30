@@ -6,7 +6,7 @@
 	<meta name="description" content="jQuery lessons">
 	<meta name="author" content="Fernando Chimicoviaki">
 
-	<title>Arquivo 12.2b</title>
+	<title>Arquivo 12.2d</title>
 
 	<style type="text/css" media="all">
 		.photo {
@@ -32,18 +32,23 @@
 	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			var openClose = $('#galery + span').addClass('open-close').css({opacity:0.6, width:120});
+			var photowidth = 800; var photoheight = 600;
+			var littlewidth = 200; var littleheight = 150;
+			$('.photo').attr({width:littlewidth, height:littleheight});
+			var openClose = $('#galery + span').addClass('open-close').css({opacity:0.6, width:littlewidth});
 			$('#galery').prepend(openClose).click(function(event) {
 				event.preventDefault();
 				$('.open-close').hide();
-				if($('.photo').attr('width') > 120) {
-					$('.photo').animate({width:120, height:90}, 1500, function() {
-						$('.open-close').show().text('Click to size').css({width: $('.photo').attr("width")});
+				if($('.photo').attr('width') > littlewidth) {
+					$('.photo').animate({width:littlewidth, height:littleheight, opacity:0.2}, 1500, function() {
+						$('.photo').animate({opacity:1}, 1000);
+						$('.open-close').show().text('Click to size').css({width:$('.photo').attr("width")});
 					});
-					$('.open-close').text('Click to size').css({width: $('.photo').attr("width")});
+					$('.open-close').text('Click to size').css({width:$('.photo').attr("width")});
 				} else {
-					$('.photo').animate({width:500, height:375}, 1500, function() {
-						$('.open-close').show().text('Click to close').css({width: $('.photo').attr("width")});
+					$('.photo').animate({width:photowidth, height:photoheight, opacity:0.2}, 1500, function() {
+						$('.photo').animate({opacity:1}, 1000);
+						$('.open-close').show().text('Click to close').css({width:$('.photo').attr("width")});
 					});
 				};
 			});
