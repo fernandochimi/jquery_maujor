@@ -58,13 +58,13 @@
 	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$('<div id=mask></div>').css({opacity:0.8, width:$(document).width(), height:$(document).height()}).appendTo('body').hide();
+			$('<div id="mask"></div>').css({opacity:0.8, width:$(document).width(), height:$(document).height()}).appendTo('body').hide();
 			$('.photo').click(function(event) {
 				event.preventDefault();
-				$('#mascara').fadeIn(1000);
+				$('#mask').fadeIn(1000);
 				$('<img class="sized-photo" />').attr('src', $(this).attr('src')).css({left:($(document).width()/2 - 250), top:($(document).width()/2 - 186)}).appendTo('body').click(function() {
 					$(this).fadeOut(1000);
-					$('#mascara').fadeOut(1500);
+					$('#mask').fadeOut(1500);
 				});
 			});
 		});
