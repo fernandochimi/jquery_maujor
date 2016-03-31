@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="description" content="jQuery lessons">
+	<meta name="author" content="Fernando Chimicoviaki">
+
+	<title>Arquivo 12.4a</title>
+
+	<style type="text/css" media="all">
+		body {
+			width: 500px;
+			font: 80%/1.2 Arial, Helvetica, sans-serif;
+			color: #666;
+			margin: 30px auto;
+			padding: 0;
+		}
+
+		.photo {
+			border: none;
+		}
+
+		#screen {
+			width: 500px;
+			height: 375px;
+			margin: 15px 0;
+			border: 8px solid #999;
+		}
+	</style>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.open-close').text('Galery: click the photo');
+			$('#galery').css({position: 'relative', width: '500px', height: '375px'});
+			$('.photo').attr({width: 500, height: 375}).css({position: 'absolute', left: 0, zIndex: 1}).click(function(event) {
+				event.preventDefault();
+				$(this).slideUp(1500, function() {
+					$(this).show().prependTo('#galery').css('cursor', 'pointer');
+				});
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<h1>Page with Photos</h1>
+	<div id="galery">
+		<a href="../img/img_1.jpg"><img src="../img/img_1.jpg" alt="Photo Description" width="100" height="75" class="photo" /></a>
+		<a href="../img/img_1.jpg"><img src="../img/img_1.jpg" alt="Photo Description" width="100" height="75" class="photo" /></a>
+		<a href="../img/img_1.jpg"><img src="../img/img_1.jpg" alt="Photo Description" width="100" height="75" class="photo" /></a>
+		<a href="../img/img_1.jpg"><img src="../img/img_1.jpg" alt="Photo Description" width="100" height="75" class="photo" /></a>
+		<a href="../img/img_1.jpg"><img src="../img/img_1.jpg" alt="Photo Description" width="100" height="75" class="photo" /></a>
+		<a href="../img/img_1.jpg"><img src="../img/img_1.jpg" alt="Photo Description" width="100" height="75" class="photo" /></a>
+		<a href="../img/img_1.jpg"><img src="../img/img_1.jpg" alt="Photo Description" width="100" height="75" class="photo" /></a>
+		<a href="../img/img_1.jpg"><img src="../img/img_1.jpg" alt="Photo Description" width="100" height="75" class="photo" /></a>
+	</div>
+	<span class="open-close">Click to size</span>
+</body>
+</html>
